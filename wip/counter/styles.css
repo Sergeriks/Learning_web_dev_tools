@@ -1,0 +1,41 @@
+* {
+    
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: auto auto;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 200px;
+    margin: -100px 0 0 -250px;
+    background-color:darkslategray;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color:azure;
+}
+
+.vault {
+    left: 50%;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: aqua;
+    width: 250px;
+    height: 50px;
+    justify-content: space-between;
+    margin: 5% 23%;
+
+
+}
+
