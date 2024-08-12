@@ -9,12 +9,43 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 500px;
-    height: 200px;
-    margin: -100px 0 0 -250px;
-    background-color:darkslategray;
+    width: 700px;
+    height: 300px;
+    margin: -150px 0 0 -350px;
+    background-color:rgb(88, 135, 180);
     border-radius: 10px;
+    text-align: center;
+    transition: 0.5s;
 }
+
+.container:before{
+    content:'';
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: azure;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.container:hover {
+    background-color:rgb(13, 102, 185);
+    filter: blur(0px);
+}
+
+.vault {
+    font-size: 100px;
+    color: azure;
+    display: block;
+    margin: 20px 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 h1 {
     text-align: center;
@@ -22,20 +53,63 @@ h1 {
     color:azure;
 }
 
-.vault {
-    left: 50%;
-}
-
 .button-container {
     display: flex;
     align-items: center;
     text-align: center;
-    background-color: aqua;
-    width: 250px;
+    background-color: transparent;
+    width: 500px;
     height: 50px;
     justify-content: space-between;
-    margin: 5% 23%;
+    margin: 20% 15%;
 
 
 }
 
+.btn {
+    width: 150px;
+    height: 75px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 25px;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.btn.decrease {
+    background-color: #d9534f;
+}
+.btn.decrease:hover {
+    background-color:#f80800;
+    width: 155px;
+    height: 80px;
+}
+
+.btn.increase {
+    background-color: #5cb85c;
+}
+.btn.increase:hover {
+    background-color:#00c500;
+    width: 155px;
+    height: 80px;
+}
+
+
+.btn.reset {
+    background-color: #f0ad4e;
+}
+.btn.reset:hover {
+    background-color:#ff9500;
+    width: 155px;
+    height: 80px;
+}
+
+@keyframes showRight {
+    100% {
+        height: 0;
+    }
+}
