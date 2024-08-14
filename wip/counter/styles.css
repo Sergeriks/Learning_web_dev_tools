@@ -46,6 +46,20 @@
     transform: translate(-50%, -50%);
 }
 
+.scale-down-up {
+    animation: scaleDownUp 0.3s ease;
+}
+
+.fade-numerics {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: azure;
+    opacity: 0;
+    animation: fadeNumerics 0.5s ease;
+}
+
 
 h1 {
     text-align: center;
@@ -111,5 +125,28 @@ h1 {
 @keyframes showRight {
     100% {
         height: 0;
+    }
+}
+
+@keyframes scaleDownUp {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    33% {
+        transform: translate(-50%, -50%) scale(0.7); 
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1); 
+    }
+}
+
+@keyframes fadeNumerics {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -100%)
     }
 }
