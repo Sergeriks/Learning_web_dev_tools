@@ -1,0 +1,32 @@
+<!--links-->
+<ul class="links">
+<li>
+<a href="index.html">home</a>
+</li>
+<li>
+<a href="about.html">about</a>
+</li>
+<li>
+<a href="projects.html">projects</a>
+</li>
+<li>
+<a href="contact.html">contact</a>
+</li>
+</ul>
+<!-- social media -->
+<ul class="social-icons">
+<li>
+<a href="https://www.facebook.com"> <i class="fa fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="https://www.twitter.com"> <i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+I
+<a href="https://www.linkedin.com"> <i class="fab fa-linkedin">
+</i>
+</a>
+</li>
+</ul>
