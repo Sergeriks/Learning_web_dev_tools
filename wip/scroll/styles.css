@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color:rgb(0, 54, 155);
+    color:rgb(255, 255, 255);
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(20px);
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+nav {
+    background-color: orangered;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px rgb(2, 31, 85);
+}
+
+.links a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  position: relative;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.links a:hover {
+  background-color: white;
+  color: orangered;
+}
+
+.links li:not(:last-child) a {
+  border-right: 2px solid white;
+  
+  padding-right: 1.5rem;
+}
+
+
+
+.links,
+.social-icons {
+  list-style: none;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-toggle {
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    color:white;
+  }
+
+  .nav-toggle:hover {
+    color: var(--clr-primary-1);
+    transform: rotate(90deg);
+  }
+
+  .logo {
+    height: 40px;
+    border-radius: 20%;
+  }
+
+  .links a:hover {
+    background: var(--clr-primary-8);
+    color: var(--clr-primary-5);
+    padding-left: 1.5rem;
+  }
+  .social-icons {
+    display: none;
+  }
+  .links {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  .show-links {
+    height: 10rem;
+  }
+  @media screen and (min-width: 800px) {
+    .nav-center {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .nav-header {
+      padding: 0;
+    }
+    .nav-toggle {
+      display: none;
+      color: white;
+    }
+    .links {
+      height: auto;
+      display: flex;
+    }
+    .links a {
+      padding: 0;
+      margin: 0 0.5rem;
+    }
+    .links a:hover {
+      padding: 0;
+      background: transparent;
+    }
+    .social-icons {
+      display: flex;
+    }
+    .social-icons a {
+      margin: 0 0.5rem;
+      color: var(--clr-primary-5);
+      transition: var(--transition);
+    }
+    .social-icons a:hover {
+      color: var(--clr-primary-7);
+    }
+  }
+
+  /* This ensures that animations don't play if settings such as ones set on Windows through Ease of Access have animations disabled*/
+  @media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+  }
