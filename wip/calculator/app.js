@@ -6,12 +6,20 @@ const operators = ["+", "-", "*", "/"];
 function appendToDisplay(input){
     if (display.value == "Error" || display.value == "Infinity") {
         display.value = "";
-    }
-    elif (display.value)
+    };
     // Check if the first character is an operator
     const firstChar = display.value[0];
     if (firstChar == operators[2] || firstChar == operators[3]){
         display.value = "";
+    }
+
+    // Checking if a number already has a comma included
+    if (input == "."){
+        const currentnumber = display.value.split(/[+\-*/]/).pop();
+
+        if (currentnumber.includes(".")) {
+            return;
+        }
     }
 
     // Check if the last character is an operator
@@ -28,10 +36,19 @@ function appendToDisplay(input){
         // Append the input if it's not an operator
         display.value += input;
     }
+
+    // Auto-scroll to the end of the text box
+    console.log(display.scrollWidth)
+    display.scrollLeft = display.scrollWidth;
 }
 
 function clearDisplay(){
     display.value = "";
+}
+
+function undoButton(){
+    
+    display.value = display.value.replace(/.$/,"");
 }
 
 function calculate(){
