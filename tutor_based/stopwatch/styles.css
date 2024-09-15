@@ -1,0 +1,128 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(0,0%,90%);
+}
+
+.navbar a{
+    font-family: monospace;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: 0.5s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    font-weight: bold;
+}
+
+#myH1{
+    font-size: 4rem;
+    font-family: "Arial", sans-serif;
+    color: hs1(0, 0%, 25%);
+}
+
+#container{
+    display: flex;
+    font-size:5rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border: 5px solid;
+    border-radius: 50px;
+    background-color: white;
+}
+
+#hours{
+    font-size:5rem;
+    width: 6rem;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+#minutes{
+    font-size:5rem;
+    width: 6rem;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+#seconds{
+    font-size:5rem;
+    width:6rem;
+    text-align:center;
+    border-radius:10px;
+}
+#textBoxtextBox_input,
+#timerDisplay{
+    font-size: 5rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: hsl(0,0%,30%);
+    text-shadow: 2px 2px 2px hsla(0,0%,0%, 0.75);
+    margin-top: 7px;
+    margin-bottom: 0px;
+}
+
+#display{
+    font-size: 5rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: hsl(0,0%,30%);
+    text-shadow: 2px 2px 2px hsla(0,0%,0%, 0.75);
+    margin-bottom: 25px;
+}
+
+#controls button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 125px;;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+#startBtn{
+    background-color:hsl(216, 100%, 50%);
+}
+
+#startBtn:hover{
+    background-color: hsl(216, 100%, 40%);
+}
+
+#startBtn:active{
+    background-color: hsl(216, 100%, 30%);
+}
+
+#stopsBtn{
+    background-color:hsl(7, 100%, 50%);
+}
+
+#stopsBtn:hover{
+    background-color: hsl(7, 100%, 40%);
+}
+
+#stopsBtn:active{
+    background-color: hsl(7, 100%, 30%);
+}
+
+#resetBtn{
+    background-color:hsl(78, 100%, 40%);
+}
+
+#resetBtn:hover{
+    background-color: hsl(78, 100%, 30%);
+}
+
+#resetBtn:active{
+    background-color: hsl(78, 100%, 20%);
+}
