@@ -24,6 +24,7 @@ function initializeGame(){
     statusText.textContent = `${currentPlayer}'s turn`;
     running = true;
 }
+
 function cellClicked(){
     const cellIndex = this.getAttribute("cellIndex");
 
@@ -34,15 +35,18 @@ function cellClicked(){
     updateCell(this, cellIndex);
     checkWinner();
 }
+
 function updateCell(cell, index){
     options[index] = currentPlayer;
     cell.textContent = currentPlayer;
 
 }
+
 function changePlayer(){
     currentPlayer = (currentPlayer == "X") ? "O" : "X";
     statusText.textContent = `${currentPlayer}'s turn`;
 }
+
 function checkWinner(){
     let roundWon = false;
 
@@ -75,9 +79,11 @@ function checkWinner(){
 
 function restartGame(){
     currentPlayer = "X";
-    let options = ["", "", "", "", "", "", "", "", ""];
+    options = ["", "", "", "", "", "", "", "", ""];
     statusText.textContent = `${currentPlayer}'s turn`;
     cells.forEach(cell => cell.textContent = "");
-    running = true;
+    currentPlayer = "X";
+    running = false;
+
     initializeGame()
 }
