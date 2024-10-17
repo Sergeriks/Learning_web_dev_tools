@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knucklebones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <h1> Knucklebones (the mini-game from Cult of the Lamb)</h1>
+        <div id="playerContainer"> Player 1</div>
+        <div id="playerDiceMoveContainer">
+            <div>Player 1's next dice:</div> 
+            <input id="diceShowcase" readonly>
+        </div>
+        <div id="cellContainer">
+            <div cellIndex="0" class="cell"></div>
+            <div cellIndex="1" class="cell"></div>
+            <div cellIndex="2" class="cell"></div>
+            <div cellIndex="3" class="cell"></div>
+            <div cellIndex="4" class="cell"></div>
+            <div cellIndex="5" class="cell"></div>
+            <div cellIndex="6" class="cell"></div>
+            <div cellIndex="7" class="cell"></div>
+            <div cellIndex="8" class="cell"></div>
+        </div>
+
+        <div id="gameContainer_2">
+            <div id="playerContainer"> Player 2</div>
+            <div id="playerDiceMoveContainer_2">
+                <div>Player 2's next dice:</div> 
+                <input id="diceShowcase_2" readonly>
+            </div>
+            <div id="cellContainer_2">
+                <div cellIndex="0" class="cell"></div>
+                <div cellIndex="1" class="cell"></div>
+                <div cellIndex="2" class="cell"></div>
+                <div cellIndex="3" class="cell"></div>
+                <div cellIndex="4" class="cell"></div>
+                <div cellIndex="5" class="cell"></div>
+                <div cellIndex="6" class="cell"></div>
+                <div cellIndex="7" class="cell"></div>
+                <div cellIndex="8" class="cell"></div>
+            </div>
+        <h2 id="statusText"></h2>
+        <button id="restartBtn">Restart</button>
+    </div>
+
+    <!-- script-->
+     <script src="app_2.js"></script>
+</body>
+</html>
