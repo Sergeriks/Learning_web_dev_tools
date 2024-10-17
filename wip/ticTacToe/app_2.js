@@ -9,7 +9,17 @@ diceShowcaseUpdate()
 function diceShowcaseUpdate(){
     cells.forEach(cell => cell.addEventListener("click",cellClicked))
     const randomNumber = getRandomDice();
-    player1_DiceShowcase.textContent = diceRomanNumerals[randomNumber];
+    player1_DiceShowcase.value = diceRomanNumerals[randomNumber];
+}
+
+function cellClicked(){
+    if (this.textContent == "") {
+        const randomNumber = player1_DiceShowcase.value;
+        this.textContent = randomNumber;
+        const randomNumber_2 = getRandomDice();
+        player1_DiceShowcase.value = diceRomanNumerals[randomNumber_2];
+    } 
+    
 }
 
 function getRandomDice(){
