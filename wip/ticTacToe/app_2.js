@@ -1,27 +1,31 @@
-const cells = document.querySelectorAll(".cell");
-const statusText = document.querySelector("#statusText");
+const player1Cells = document.querySelectorAll("#cellContainer .cell");
+const player2Cells = document.querySelectorAll("#cellContainer_2 .cell");
 const player1_DiceShowcase = document.getElementById("diceShowcase");
 const player2_DiceShowcase = document.getElementById("diceShowcase_2");
 const diceRomanNumerals = ["I", "II", "III", "IV", "V", "VI"];
 
-diceShowcaseUpdate()
+// Initialize both players' dice showcases
+diceShowcaseUpdate(player1_DiceShowcase)
+diceShowcaseUpdate(player2_DiceShowcase)
 
-function diceShowcaseUpdate(){
-    cells.forEach(cell => cell.addEventListener("click",cellClicked))
+// Event listeners for each player's cells
+player1Cells.forEach(cell => cell.addEventListener("click", () => cellClicked(cell, player1_DiceShowcase)));
+player2Cells.forEach(cell => cell.addEventListener("click", () => cellClicked(cell, player2_DiceShowcase)));
+
+function diceShowcaseUpdate(diceShowcaseM){
     const randomNumber = getRandomDice();
-    player1_DiceShowcase.value = diceRomanNumerals[randomNumber];
+    diceShowcaseM.value = diceRomanNumerals[randomNumber];
 }
 
-function cellClicked(){
-    if (this.textContent == "") {
-        const randomNumber = player1_DiceShowcase.value;
-        this.textContent = randomNumber;
-        const randomNumber_2 = getRandomDice();
-        player1_DiceShowcase.value = diceRomanNumerals[randomNumber_2];
-    } 
+function cellClicked(cell, diceShowcase){
+    if (cell.textContent === "") {
+        cell.textContent = diceShowcase.value;
+
+        diceShowcaseUpdate(diceShowcase);
+    }
     
 }
 
 function getRandomDice(){
-    return Math.floor(Math.random() * diceRomanNumerals.length)
+    return Math.floor(Math.random() * diceRomanNumerals.length);
 }
